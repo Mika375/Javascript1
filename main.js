@@ -36,11 +36,14 @@ start.addEventListener("click", function(){
   startTime = Date.now();
   countUp();
   start.disabled = true;
+  reset.disabled = true;
 });
 
 stop.addEventListener("click", function(){
   clearTimeout(timerId);
   timeToadd += Date.now() - startTime;
+  start.disabled = false;
+  reset.disabled = false;
 });
 
 reset.addEventListener("click", function(){
