@@ -35,6 +35,7 @@ timerId = setTimeout(function(){
 start.addEventListener("click", function(){
   startTime = Date.now();
   countUp();
+  start.disabled = true;
 });
 
 stop.addEventListener("click", function(){
@@ -46,5 +47,6 @@ reset.addEventListener("click", function(){
   elapsedTime = 0;
   timeToadd = 0;
   updateTimetText();
+  start.disabled = false;
 });
 
